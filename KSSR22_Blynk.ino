@@ -8,7 +8,6 @@
   #include <BlynkSimpleShieldEsp8266.h>
   
   char auth[] = "token - zapytac mnie pw";
-  
   char ssid[] = "nazwa swojej sieci";
   char pass[] = "haslo do tej sieci";
   
@@ -107,8 +106,8 @@
     timer.run();
   }
 
-#elif
-
+#else
+// ----------------------------------------------- to sluzy do wysylania polecen AT do ESP8266 przez monitor portu szeregowego (normalnie nie jest kompilowane) -----------------------------------------------------
   #include <SoftwareSerial.h>
   
   SoftwareSerial mySerial(2, 3);  //RX,TX

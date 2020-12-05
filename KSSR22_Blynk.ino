@@ -7,12 +7,12 @@
   #include <ESP8266_Lib.h>
   #include <BlynkSimpleShieldEsp8266.h>
   
-  char auth[] = "token - zapytac mnie pw";
-  char ssid[] = "nazwa swojej sieci";
-  char pass[] = "haslo do tej sieci";
+  char auth[] = "zapytac mnie co tu wpisac";
+  char ssid[] = "nazwa sieci";
+  char pass[] = "haslo do wifi";
   
   #include <SoftwareSerial.h>
-  SoftwareSerial EspSerial(2, 3); // RX, TX
+  SoftwareSerial EspSerial(2, 3); // RX, TX dla arduino
   
   #define ESP8266_BAUD 9600
   
@@ -33,7 +33,7 @@
     if(Blynk.connected() && (millis() >= START_LISTENING))
     {
       //ledConnecting.off();
-      digitalWrite(12, LOW);
+      digitalWrite(9, LOW);
       connection = true;
     }
   }
@@ -51,10 +51,10 @@
       ledVOn = 0;
     }
     
-    if(digitalRead(13) == LOW)
-      digitalWrite(13, HIGH);
+    if(digitalRead(8) == LOW)
+      digitalWrite(8, HIGH);
     else
-      digitalWrite(13, LOW);
+      digitalWrite(8, LOW);
   
   }
   
@@ -76,7 +76,7 @@
   
   void setup()
   {
-    digitalWrite(12, HIGH);
+    digitalWrite(9, HIGH);
     
     // Debug console
     Serial.begin(9600);
@@ -127,11 +127,11 @@
   {
       pinMode(LEDPIN, OUTPUT);
    
-      Serial.begin(9600);     // communication with the host computer
+      Serial.begin(115200);     // communication with the host computer
       //while (!Serial)   { ; }
    
       // Start the software serial for communication with the ESP8266
-      mySerial.begin(9600);  
+      mySerial.begin(115200);  
    
       Serial.println("");
       Serial.println("Remember to to set Both NL & CR in the serial monitor.");

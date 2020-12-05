@@ -1,3 +1,3 @@
-KSSR22_Blynk - program na wykrywanie hałasu\n
-KSSR22_Rec - program do tworzenia nagrań\n
-KSSR22_Sketch - schemat w Fritzing
+KSSR22_Blynk - program na wykrywanie hałasu
+KSSR22_Rec - program do tworzenia nagrań
+KSSR22 - schemat w Fritzing

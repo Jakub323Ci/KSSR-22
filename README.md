@@ -6,3 +6,6 @@ UWAGI:
 2. Edit pcmConfig.h
     a: On Uno or non-mega boards, #define buffSize 128. May need to increase.
     b: Uncomment #define ENABLE_RECORDING and #define BLOCK_COUNT 10000UL
+3. zaimportowac czytnik kart SD i modul ESP do fritzing
+    linki skąd to wziąłem: https://github.com/ydonnelly/ESP8266_fritzing/blob/master/ESP8266-01%20WiFi%20Module.fzpz
+                           https://github.com/robertoostenveld/fritzing/blob/master/SD%20Card%20Module.fzpz

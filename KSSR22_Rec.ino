@@ -18,7 +18,7 @@ volatile unsigned long i = 0;
 volatile bool recmode = 0;
 
 void setup() {
-  pinMode(A0, INPUT);
+  pinMode(A1, INPUT);
   pinMode(8, OUTPUT);
   pinMode(2, INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(2), button, LOW);
@@ -40,16 +40,16 @@ void button() {
     audiofile++;
     digitalWrite(8, HIGH);
     switch (audiofile) {
-      case 1: audio.startRecording("1.wav", 16000, A0); break;
-      case 2: audio.startRecording("2.wav", 16000, A0); break;
-      case 3: audio.startRecording("3.wav", 16000, A0); break;
-      case 4: audio.startRecording("4.wav", 16000, A0); break;
-      case 5: audio.startRecording("5.wav", 16000, A0); break;
-      case 6: audio.startRecording("6.wav", 16000, A0); break;
-      case 7: audio.startRecording("7.wav", 16000, A0); break;
-      case 8: audio.startRecording("8.wav", 16000, A0); break;
-      case 9: audio.startRecording("9.wav", 16000, A0); break;
-      case 10: audio.startRecording("10.wav", 16000, A0); break;
+      case 1: audio.startRecording("1.wav", 16000, A1); break;
+      case 2: audio.startRecording("2.wav", 16000, A1); break;
+      case 3: audio.startRecording("3.wav", 16000, A1); break;
+      case 4: audio.startRecording("4.wav", 16000, A1); break;
+      case 5: audio.startRecording("5.wav", 16000, A1); break;
+      case 6: audio.startRecording("6.wav", 16000, A1); break;
+      case 7: audio.startRecording("7.wav", 16000, A1); break;
+      case 8: audio.startRecording("8.wav", 16000, A1); break;
+      case 9: audio.startRecording("9.wav", 16000, A1); break;
+      case 10: audio.startRecording("10.wav", 16000, A1); break;
     }
   }
   else {

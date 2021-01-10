@@ -2,20 +2,19 @@
 
   #define START_LISTENING 30000 //czas po ktorym otrzymujemy pierwszy pomiar z czujnika
   #define NOISE_TRSHLD 200      //granica dzwieku przy ktorej dostajemy powiadomienie
-  #define BLYNK_PRINT Serial
+  #define BLYNK_PRINT Serial  
+  #define ESP8266_BAUD 9600
   
   #include <ESP8266_Lib.h>
-  #include <BlynkSimpleShieldEsp8266.h>
+  #include <BlynkSimpleShieldEsp8266.h>  
+  #include <SoftwareSerial.h>
   
   char auth[] = "zapytac mnie co tu wpisac";
   char ssid[] = "nazwa sieci";
   char pass[] = "haslo do wifi";
-  
-  #include <SoftwareSerial.h>
+
   SoftwareSerial EspSerial(2, 3); // RX, TX dla arduino
-  
-  #define ESP8266_BAUD 9600
-  
+
   ESP8266 wifi(&EspSerial);
   
   WidgetLED ledShot(V0);
